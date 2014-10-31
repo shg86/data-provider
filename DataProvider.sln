@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataProvider", "DataProvider\DataProvider.csproj", "{9284B449-D37F-49D5-A095-5BB42A68252F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDiagnostics", "CustomDiagnostics\CustomDiagnostics.csproj", "{F3D30B76-385A-431F-8F04-325A94601AD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9284B449-D37F-49D5-A095-5BB42A68252F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9284B449-D37F-49D5-A095-5BB42A68252F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9284B449-D37F-49D5-A095-5BB42A68252F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9284B449-D37F-49D5-A095-5BB42A68252F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3D30B76-385A-431F-8F04-325A94601AD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3D30B76-385A-431F-8F04-325A94601AD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3D30B76-385A-431F-8F04-325A94601AD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3D30B76-385A-431F-8F04-325A94601AD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
