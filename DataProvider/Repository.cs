@@ -55,6 +55,11 @@ namespace Repository
             return item;
         }
 
+        private void _Test()
+        {
+            //TOOD: Add body.
+        }
+
         protected void ExecuteCommand(IDbCommand command)
         {
             try
