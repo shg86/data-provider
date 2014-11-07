@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9284B449-D37F-49D5-A095-5BB42A68252F}</ProjectGuid>
+    <ProjectGuid>{C5ECF87E-617A-4827-8FFD-0ACAFD44E17F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataProvider</RootNamespace>
-    <AssemblyName>DataProvider</AssemblyName>
+    <RootNamespace>Extensions</RootNamespace>
+    <AssemblyName>Extensions</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,15 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conversion.cs" />
-    <Compile Include="Repository.cs" />
+    <Compile Include="Decimal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CustomDiagnostics\Diagnostics.csproj">
-      <Project>{f3d30b76-385a-431f-8f04-325a94601ad9}</Project>
-      <Name>Diagnostics</Name>
-    </ProjectReference>
+    <Compile Include="String.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

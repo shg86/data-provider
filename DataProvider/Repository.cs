@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 
-namespace Repository
+namespace DataProvider
 {
     public abstract class Repository<T> where T : new()
     {
@@ -53,11 +53,6 @@ namespace Repository
             }
 
             return item;
-        }
-
-        private void _Test()
-        {
-            //TOOD: Add body.
         }
 
         protected void ExecuteCommand(IDbCommand command)
