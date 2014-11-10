@@ -1,4 +1,4 @@
-﻿using CustomDiagnostics;
+﻿using Diagnostics;
 using System;
 using System.Collections.Generic;
 using System.Data;
