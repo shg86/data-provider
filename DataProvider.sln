@@ -5,10 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataProvider", "DataProvide
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diagnostics", "CustomDiagnostics\Diagnostics.csproj", "{F3D30B76-385A-431F-8F04-325A94601AD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions", "Extensions\Extensions.csproj", "{C5ECF87E-617A-4827-8FFD-0ACAFD44E17F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendar", "Calendar\Calendar.csproj", "{F2376CD3-D866-46A9-81CD-5C01D706E763}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,14 +19,6 @@ Global
 		{F3D30B76-385A-431F-8F04-325A94601AD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3D30B76-385A-431F-8F04-325A94601AD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3D30B76-385A-431F-8F04-325A94601AD9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C5ECF87E-617A-4827-8FFD-0ACAFD44E17F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C5ECF87E-617A-4827-8FFD-0ACAFD44E17F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C5ECF87E-617A-4827-8FFD-0ACAFD44E17F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C5ECF87E-617A-4827-8FFD-0ACAFD44E17F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F2376CD3-D866-46A9-81CD-5C01D706E763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F2376CD3-D866-46A9-81CD-5C01D706E763}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F2376CD3-D866-46A9-81CD-5C01D706E763}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F2376CD3-D866-46A9-81CD-5C01D706E763}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
