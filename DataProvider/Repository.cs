@@ -1,6 +1,7 @@
 ﻿using Diagnostics;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 
@@ -8,6 +9,12 @@ namespace DataProvider
 {
     public abstract class Repository<T> where T : new()
     {
+        /// <summary>
+        /// Specifies if errors should be logged in a text file.
+        /// </summary>
+        [DefaultValue(false)]
+        public bool LogErrors { get; set; }
+
         protected IEnumerable<T> ToList(IDbCommand command)
         {
             List<T> items = new List<T>();
@@ -26,7 +33,7 @@ namespace DataProvider
             }
             catch (Exception ex)
             {
-                Log.Message(Log.GetCurrentMethod(), string.Format("An error occured during data retrieval: {0}", ex.Message), MessageType.Error);
+                if (LogErrors) { WriteMessageToLog(Log.GetCurrentMethod(), ex.Message, MessageType.Error); }
             }
 
             return items;
@@ -38,7 +45,6 @@ namespace DataProvider
 
             try
             {
-
                 using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read())
@@ -49,7 +55,7 @@ namespace DataProvider
             }
             catch (Exception ex)
             {
-                Log.Message(Log.GetCurrentMethod(), string.Format("An error occured during data retrieval: {0}", ex.Message), MessageType.Error);
+                if (LogErrors) { WriteMessageToLog(Log.GetCurrentMethod(), ex.Message, MessageType.Error); }
             }
 
             return item;
@@ -63,8 +69,29 @@ namespace DataProvider
             }
             catch (Exception ex)
             {
-                Log.Message(Log.GetCurrentMethod(), string.Format("An error occured during command executing: {0}", ex.Message), MessageType.Error);
+                if (LogErrors) { WriteMessageToLog(Log.GetCurrentMethod(), ex.Message, MessageType.Error); }
             }
+        }
+
+        protected object ExecuteScalar(IDbCommand command)
+        {
+            object result = null;
+
+            try
+            {
+                result = command.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                if (LogErrors) { WriteMessageToLog(Log.GetCurrentMethod(), ex.Message, MessageType.Error); }
+            }
+
+            return result;
+        }
+
+        protected void WriteMessageToLog(string methodName, string message, MessageType type)
+        {
+            Log.Message(methodName, string.Format("An error occured during command executing: {0}", message), type);
         }
 
         protected abstract void Map(IDataRecord record, T entity);

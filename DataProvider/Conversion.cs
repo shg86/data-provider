@@ -51,5 +51,29 @@ namespace DataProvider
 
             return false;
         }
+
+        public static int ReadNullableInt(string field, IDataRecord data)
+        {
+            var input = data[field];
+
+            if (input != DBNull.Value)
+            {
+                return Convert.ToInt32(input);
+            }
+
+            return 0;
+        }
+
+        public static byte ReadNullableByte(string field, IDataRecord data)
+        {
+            var input = data[field];
+
+            if (input != DBNull.Value)
+            {
+                return Convert.ToByte(input);
+            }
+
+            return 0;
+        }
     }
 }
